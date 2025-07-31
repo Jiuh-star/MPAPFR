@@ -1,0 +1,18 @@
+# python generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+workdir/
+workdir*/
+requirements-dev.lock
+requirements.lock
+# venv
+.venv
+.*
+!.gitignore
+/dist/
+/data/
+*.log

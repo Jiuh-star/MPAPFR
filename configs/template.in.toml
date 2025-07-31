@@ -1,0 +1,46 @@
+seed = 1
+io_policy = "real"
+protocol = "{}"
+dataset = "data/cifar10-cnn.fl"
+workdir = "{}"
+max_epoch = 1000
+tensorboard = true
+eval_interval = 10
+concurrent = 10
+devices = ["cuda:0", "cuda:1", "cuda:2", "cuda:3"]
+
+[client]
+max_epoch = 3
+personalized_max_epoch = 3
+
+[client.optimizer]
+type = "SGD"
+lr = 0.005
+
+[client.criterion]
+type = "CrossEntropyLoss"
+
+[client.personalized_optimizer]
+type = "SGD"
+lr = 0.005
+
+[client.personalized_criterion]
+type = "CrossEntropyLoss"
+
+[attacker]
+strategy = "DoNothingAttackStrategy"
+number = 2
+continuous = false
+attack_range = [50, 800, 1]
+
+[server]
+select_ratio = 0.05  # 10 clients
+learning_rate = 1.0
+
+[server.model]
+type = "CnnModel"
+in_channels = 3
+num_class = 10
+dim = 1600
+
+[server.robust_fn]

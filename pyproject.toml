@@ -1,0 +1,43 @@
+[project]
+name = "pfl-attack"
+version = "0.1.0"
+description = "Code for personalized federated learning attack."
+authors = [{ name = "Anonymous", email = "anonymous@example.com" }]
+dependencies = [
+    "torch==2.4.1+cu124",
+    "torchaudio>=2.2.2",
+    "torchvision>=0.17.2",
+    "loguru>=0.7.2",
+    "filelock>=3.13.1",
+    "more-itertools>=10.2.0",
+    "python-box>=7.1.1",
+    "torchmetrics>=1.0.3",
+    "tensorboard>=2.16.2",
+    "typer>=0.12.3",
+    "rich>=13.7.1",
+    "matplotlib>=3.9.0",
+    "protobuf<5.0.0",
+    "scikit-learn>=1.5.0",
+    "toml>=0.10.2",
+    "gdown>=5.2.0",
+    "orjson>=3.10.9",
+]
+readme = "README.md"
+requires-python = ">= 3.12"
+
+[tool.rye]
+managed = true
+dev-dependencies = ["black>=24.2.0", "ipython>=8.22.2", "paramiko>=3.5.0"]
+
+[[tool.rye.sources]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu124"
+
+[tool.black]
+line-length = 120
+
+[project.scripts]
+pfl = "main:app"
+
+[tool.rye.scripts]
+deploy = { cmd = "python scripts/deploy.py", env-file = ".deploy.env" }
