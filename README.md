@@ -1,4 +1,4 @@
-# MPAPFR
+# MPAPFR: Model Poisoning Attack Targeting Both Fairness and Robustness in Personalized Federated Learning
 
 The code for this project is continuously being updated. Please note that the associated paper is currently under review, and the content of this repository may be subject to changes based on the ongoing review process.
 
