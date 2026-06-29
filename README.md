@@ -1,3 +1,8 @@
+> [!NOTE]
+> Following [this draft](https://www.ietf.org/archive/id/draft-abaris-aicdh-00.html), we disclosure the presence and degree of vibe coding in the repo.
+> 
+> `AI-Disclosure: none`
+
 # MPAPFR: Model Poisoning Attack Targeting Both Fairness and Robustness in Personalized Federated Learning
 
 The code for this project is continuously being updated. Please note that the associated paper is currently under review, and the content of this repository may be subject to changes based on the ongoing review process.
